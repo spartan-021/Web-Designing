@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookGallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #fff;
+            margin-right: 20px;
+        }
+        
+        .site-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #fff;
+            letter-spacing: 2px;
+        }
+        
+        .navbar {
+            background-color: #5a67d8;
+            display: flex;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .navbar a {
+            flex: 1;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            border-right: 1px solid #4c51bf;
+        }
+        
+        .navbar a:last-child {
+            border-right: none;
+        }
+        
+        .container {
+            display: flex;
+            min-height: 500px;
+        }
+        
+        .sidebar {
+            width: 300px;
+            background-color: #8f6666;
+            border-right: 3px solid #ddd;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+        }
+        
+        .sidebar-item {
+            padding: 18px;
+            border-bottom: 4px solid #e9ecef;
+            cursor: pointer;
+            font-weight: bold;
+            color: #0a0a0a;
+        }
+        
+        .content {
+            flex: 1;
+            padding: 40px;
+            background-color: #fff;
+            text-align: center;
+        }
+        
+        .description {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto 40px;
+        }
+        
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .book-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .book-cover {
+            width: 150px;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0 auto 15px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+        }
+        
+        .book-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .book-author {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .book-price {
+            font-size: 20px;
+            color: #5a67d8;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .add-cart-btn {
+            background: #5a67d8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            opacity: 0.85;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="site-title">📚 BookGallery</div>
+    </div>
+    
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#login">Login</a>
+        <a href="#registration">Registration</a>
+        <a href="#catalogue">Catalogue</a>
+        <a href="#cart">Cart</a>
+    </nav>
+    
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-item">CSE</div>
+            <div class="sidebar-item">ECE</div>
+            <div class="sidebar-item">EEE</div>
+            <div class="sidebar-item">Civil</div>
+        </div>
+        
+        <div class="content">
+            <p class="description">
+                Description of the Website: This website provides a catalogue of books for different engineering branches such as CSE, ECE, EEE, and CIVIL. Users can view book details, check prices, register to create an account, log in, and add selected books to the shopping cart.
+            </p>
+            
+            <div class="books-grid">
+                <div class="book-card">
+                    <div class="book-cover">🌐</div>
+                    <div class="book-title">Web Development</div>
+                    <div class="book-author">by Jon Duckett</div>
+                    <div class="book-price">₹649</div>
+                    <button class="add-cart-btn">Add to Cart</button>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover">💻</div>
+                    <div class="book-title">Data Structures and Algorithms</div>
+                    <div class="book-author">by Robert Sedgewick</div>
+                    <div class="book-price">₹599</div>
+                    <button class="add-cart-btn">Add to Cart</button>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover">⚡</div>
+                    <div class="book-title">Digital Electronics</div>
+                    <div class="book-author">by Morris Mano</div>
+                    <div class="book-price">₹549</div>
+                    <button class="add-cart-btn">Add to Cart</button>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover">🧮</div>
+                    <div class="book-title">Discrete Structures and Theory of Logic</div>
+                    <div class="book-author">by Kenneth Rosen</div>
+                    <div class="book-price">₹699</div>
+                    <button class="add-cart-btn">Add to Cart</button>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover">🖥️</div>
+                    <div class="book-title">Computer Organisation and Architecture</div>
+                    <div class="book-author">by William Stallings</div>
+                    <div class="book-price">₹749</div>
+                    <button class="add-cart-btn">Add to Cart</button>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover">🐍</div>
+                    <div class="book-title">Python Programming</div>
+                    <div class="book-author">by Mark Lutz</div>
+                    <div class="book-price">₹579</div>
+                    <button class="add-cart-btn">Add to Cart</button>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover">📝</div>
+                    <div class="book-title">Technical Communication</div>
+                    <div class="book-author">by Mike Markel</div>
+                    <div class="book-price">₹499</div>
+                    <button class="add-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
