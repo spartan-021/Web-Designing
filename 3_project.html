@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #f28c28;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .card h3 {
+            background: #ffb86c;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            display: block;
+            font-size: 18px;
+            margin: 10px 0;
+            font-weight: bold;
+            color: #f28c28;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background: orange;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            transition: 0.2s ease;
+        }
+
+        .btn:hover {
+            background: #e07b00;
+        }
+    </style>
+</head>
+<body>
+    <header>Book Gallery</header>
+
+    <div class="grid-container">
+        <div class="card">
+            <h3>CSE</h3>
+            <img src="https://via.placeholder.com/150" />
+            <p><strong>XML Bible</strong><br>Author: Winston<br>Publication: Wiley</p>
+            <span class="price">$40.5</span>
+            <button class="btn">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>ECE</h3>
+            <img src="https://via.placeholder.com/150" />
+            <p><strong>Artificial Intelligence</strong><br>Author: Stuart<br>Publication: McGraw Hill</p>
+            <span class="price">$63</span>
+            <button class="btn">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>EEE</h3>
+            <img src="https://via.placeholder.com/150" />
+            <p><strong>Java 2</strong><br>Author: Watson<br>Publication: BPB</p>
+            <span class="price">$35.5</span>
+            <button class="btn">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>CIVIL</h3>
+            <img src="https://via.placeholder.com/150" />
+            <p><strong>HTML in 24 Hours</strong><br>Author: Miller<br>Publication: SAMS</p>
+            <span class="price">$50</span>
+            <button class="btn">Add to Cart</button>
+        </div>
+    </div>
+</body>
+</html>

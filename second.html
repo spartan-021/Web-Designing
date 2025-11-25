@@ -5,230 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookGallery - Login</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-
-        .header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .logo-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #ffd700;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .site-title {
-            font-size: 32px;
-            font-weight: bold;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .nav {
-            display: flex;
-            background: rgba(255,255,255,0.1);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .nav-item {
-            flex: 1;
-            padding: 12px 20px;
-            text-align: center;
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s;
-            border-right: 1px solid rgba(255,255,255,0.2);
-        }
-
-        .nav-item:last-child {
-            border-right: none;
-        }
-
-        .nav-item:hover {
-            background: rgba(255,255,255,0.2);
-        }
-
-        .nav-item.active {
-            background: rgba(255,255,255,0.25);
-            font-weight: bold;
-        }
-
-        .container {
-            display: flex;
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .sidebar {
-            width: 200px;
-            margin-right: 30px;
-        }
-
-        .sidebar-item {
-            background: white;
-            padding: 15px 20px;
-            margin-bottom: 10px;
-            border-radius: 8px;
-            color: #2a5298;
-            font-weight: 600;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-
-        .sidebar-item:hover {
-            transform: translateX(5px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            background: #ffd700;
-        }
-
-        .main-content {
-            flex: 1;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-        }
-
-        h1 {
-            color: #1e3c72;
-            margin-bottom: 30px;
-            font-size: 28px;
-            border-bottom: 3px solid #ffd700;
-            padding-bottom: 10px;
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        label {
-            display: inline-block;
-            width: 120px;
-            color: #333;
-            font-weight: 600;
-            font-size: 16px;
-        }
-
-        input[type="text"],
-        input[type="password"] {
-            padding: 12px 15px;
-            width: 300px;
-            border: 2px solid #ddd;
-            border-radius: 6px;
-            font-size: 16px;
-            transition: all 0.3s;
-        }
-
-        input[type="text"]:focus,
-        input[type="password"]:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-        }
-
-        .button-group {
-            margin-left: 120px;
-            margin-top: 30px;
-        }
-
-        button {
-            padding: 12px 35px;
-            margin-right: 15px;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .submit-btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            box-shadow: 0 4px 6px rgba(102, 126, 234, 0.4);
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(102, 126, 234, 0.6);
-        }
-
-        .reset-btn {
-            background: #f5f5f5;
-            color: #333;
-            border: 2px solid #ddd;
-        }
-
-        .reset-btn:hover {
-            background: #e0e0e0;
-            border-color: #999;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { font-family: Arial, sans-serif; background: #f0f2f5; }
+        
+        .header { background: #2c3e50; color: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
+        
+        .logo { font-weight: bold; font-size: 20px; }
+        
+        .nav { display: flex; gap: 30px; }
+        
+        .nav a { color: white; text-decoration: none; }
+        
+        .nav a.active { color: #3498db; font-weight: bold; }
+        
+        .container { display: flex; max-width: 1000px; margin: 50px auto; gap: 20px; }
+        
+        .sidebar { width: 150px; }
+        
+        .sidebar div { background: white; padding: 15px; margin-bottom: 10px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); opacity: 0.7; transition: opacity 0.3s; }
+        
+        .sidebar div:hover { opacity: 1; }
+        
+        .main { flex: 1; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        
+        h2 { color: #2c3e50; margin-bottom: 30px; }
+        
+        .form-group { margin-bottom: 20px; }
+        
+        label { display: inline-block; width: 120px; font-weight: bold; }
+        
+        input { padding: 10px; width: 250px; border: 1px solid #ddd; border-radius: 4px; }
+        
+        button { padding: 10px 30px; margin-right: 10px; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; }
+        
+        .submit { background: #3498db; color: white; }
+        
+        .reset { background: #95a5a6; color: white; }
+        
+        button:hover { opacity: 0.9; }
     </style>
 </head>
 <body>
     <div class="header">
-        <div class="logo-bar">
-            <div class="logo">Logo</div>
-            <div class="site-title">BookGallery</div>
-        </div>
+        <div class="logo">Logo - BookGallery</div>
         <nav class="nav">
-            <a href="#" class="nav-item">Home</a>
-            <a href="#" class="nav-item active">Login</a>
-            <a href="#" class="nav-item">Registration</a>
-            <a href="#" class="nav-item">Catalogue</a>
-            <a href="#" class="nav-item">Cart</a>
+            <a href="#">Home</a>
+            <a href="#" class="active">Login</a>
+            <a href="#">Registration</a>
+            <a href="#">Catalogue</a>
+            <a href="#">Cart</a>
         </nav>
     </div>
 
     <div class="container">
-        <aside class="sidebar">
-            <div class="sidebar-item">CSE</div>
-            <div class="sidebar-item">ECE</div>
-            <div class="sidebar-item">EEE</div>
-            <div class="sidebar-item">CIVIL</div>
-        </aside>
+        <div class="sidebar">
+            <div>CSE</div>
+            <div>ECE</div>
+            <div>EEE</div>
+            <div>CIVIL</div>
+            <div>MECHANICAL</div>
+        </div>
 
-        <main class="main-content">
-            <h1>Login Page</h1>
+        <div class="main">
+            <h2>Login Page</h2>
             <form>
                 <div class="form-group">
-                    <label for="username">User Name:</label>
-                    <input type="text" id="username" name="username" placeholder="Enter your username">
+                    <label>User Name:</label>
+                    <input type="text" placeholder="Enter username">
                 </div>
                 <div class="form-group">
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password">
+                    <label>Password:</label>
+                    <input type="password" placeholder="Enter password">
                 </div>
-                <div class="button-group">
-                    <button type="submit" class="submit-btn">Submit</button>
-                    <button type="reset" class="reset-btn">Reset</button>
+                <div style="margin-left: 120px; margin-top: 30px;">
+                    <button type="submit" class="submit">Submit</button>
+                    <button type="reset" class="reset">Reset</button>
                 </div>
             </form>
-        </main>
+        </div>
     </div>
 </body>
 </html>
